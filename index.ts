@@ -19,6 +19,7 @@ const getdate = async (resurse: any) => {
   }
 
   remove.forEach((item, idx) => {
+    
     item.addEventListener("click", () => {
       console.log(item, idx);
       userTabble[idx].style.opacity = "0.3";
