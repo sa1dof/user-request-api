@@ -12,7 +12,6 @@ const getdate = async (resurse: any) => {
   const request = await fetch(resurse);
   const data = await request.json();
 
-
   for (let i = 0; i < names.length; i++) {
     names[i].textContent = data[i].name;
     email[i].textContent = data[i].email;
@@ -44,24 +43,3 @@ getdate(API)
     console.log(new Error(`Not found... ${err}`));
   });
 
-// fetch(API).then((date) =>{
-//     return date.json();
-// }).then((dataJson) => {
-//     console.log(dataJson);
-// }).catch((err) =>{
-//     console.log(err);
-// })
-// const getDate = (resource) =>{
-//     return new Promise((resolve, reject) =>{
-//         const request = new XMLHttpRequest();
-
-//         request.addEventListener("readystatechange", () =>{
-//             console.log(request);
-//         })
-
-//         request.open("GET", resource);
-//         request.send();
-//     })
-// }
-
-// getDate(API)
